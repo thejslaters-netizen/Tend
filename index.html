@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#7f9b84" />
+  <title>Tend — Peaceful Homekeeping</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Small acts of care</p>
+      <h1>Tend</h1>
+      <p class="subtitle">A more peaceful home, one gentle task at a time.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="card hero-card">
+      <p id="greeting" class="greeting"></p>
+      <h2>How much energy do you have today?</h2>
+      <div class="energy-grid" role="group" aria-label="Choose energy level">
+        <button class="energy-btn" data-energy="gentle">Gentle<br><span>5–10 min</span></button>
+        <button class="energy-btn active" data-energy="steady">Steady<br><span>15–30 min</span></button>
+        <button class="energy-btn" data-energy="abundant">Abundant<br><span>30–60 min</span></button>
+        <button class="energy-btn rescue" data-energy="rescue">I’m overwhelmed</button>
+      </div>
+    </section>
+
+    <section class="card intention-card">
+      <p class="eyebrow">Today’s intention</p>
+      <blockquote id="dailyIntention">I create peace through gentle, purposeful action.</blockquote>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Current focus</p>
+          <h2 id="zoneTitle">Welcome & Nourishment</h2>
+        </div>
+        <button id="nextZoneBtn" class="text-btn">Next zone</button>
+      </div>
+      <p id="zoneTheme" class="zone-theme"></p>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Today’s acts of care</p>
+          <h2 id="taskCountTitle">Three small acts are enough.</h2>
+        </div>
+        <button id="refreshTasksBtn" class="text-btn">Refresh</button>
+      </div>
+      <div id="taskList" class="task-list"></div>
+    </section>
+
+    <section class="card progress-card">
+      <p class="eyebrow">Gift of completion</p>
+      <h2 id="progressText">No pressure. Begin with one small thing.</h2>
+      <div class="progress-track" aria-hidden="true"><div id="progressBar"></div></div>
+      <p class="reflection-prompt">Pause and notice: what feels calmer now?</p>
+    </section>
+
+    <section class="card room-card">
+      <p class="eyebrow">Your home</p>
+      <h2>Five peaceful zones</h2>
+      <div id="zoneList" class="zone-list"></div>
+    </section>
+  </main>
+
+  <dialog id="taskDialog">
+    <form method="dialog" class="dialog-card">
+      <button class="close-btn" value="cancel" aria-label="Close">×</button>
+      <p id="dialogRoom" class="eyebrow"></p>
+      <h2 id="dialogTitle"></h2>
+      <p id="dialogWhy"></p>
+      <div class="mantra-box">
+        <p class="eyebrow">Mantra</p>
+        <blockquote id="dialogMantra"></blockquote>
+      </div>
+      <div class="blessing-box">
+        <p class="eyebrow">Completion blessing</p>
+        <p id="dialogBlessing"></p>
+      </div>
+      <button id="completeFromDialog" class="primary-btn" value="default">Mark complete</button>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

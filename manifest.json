@@ -1,0 +1,10 @@
+{
+  "name": "Tend — Peaceful Homekeeping",
+  "short_name": "Tend",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f3ea",
+  "theme_color": "#7f9b84",
+  "description": "A gentle homekeeping companion focused on peace, not perfection.",
+  "icons": []
+}
